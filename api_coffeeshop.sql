@@ -1,4 +1,4 @@
-CREATE DATABASE coffeeshop;
+CREATE DATABASE api_coffee_shop;
 
 CREATE TABLE User(
 	id bigint auto_increment primary key,
@@ -117,6 +117,14 @@ CREATE TABLE Shipment(
     foreign key (order_id) REFERENCES `order`(id)
 );
 
+CREATE TABLE refresh_token(
+	id bigint primary key auto_increment,
+	expire_date datetime,
+	token varchar(255), 
+	user_id bigint,
+    foreign key (user_id) REFERENCES user(id)
+);
+
 
 -- password: 1234 (đã được mã hóa)
 INSERT INTO user values(1,'2003-04-15','nttue03@gmail.com','Nguyen Tai Tue','true','$2a$10$P7eZP83B9dCNCQ/J9Vjz6OO9IIv9AQIelNABl3u.uuw1e7JJxYUHi',0,'new','admin');
@@ -162,10 +170,3 @@ INSERT INTO shipment values(1,'false','HN001','Nguyen Tai Tue','0383291503',1,1)
 INSERT INTO item Values(1,'30%',45000,1,'XL','30%','Cà phê',1,1);
 
 INSERT INTO Bill Values(1,45000,1);
-
-
-
-
-
-
-
