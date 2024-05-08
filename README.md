@@ -5,7 +5,7 @@
   
 ## Database
 *Diagram*
-<img src="images/diagram.png">
+<img src="images/diagram_png.png">
 
 ## Features
 ### 1. View Products
