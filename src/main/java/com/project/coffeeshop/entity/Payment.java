@@ -11,9 +11,7 @@ import java.util.List;
 @Entity
 @Table
 @Data
-public class Payment implements Serializable {
-
-    private static final long serialVersionUID = 1L;
+public class Payment{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

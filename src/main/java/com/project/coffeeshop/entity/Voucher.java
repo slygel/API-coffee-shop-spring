@@ -9,10 +9,8 @@ import java.sql.Date;
 import java.util.List;
 
 @Entity
-public class Voucher implements Serializable{
+public class Voucher{
 
-	private static final long serialVersionUID = 1L;
-	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;

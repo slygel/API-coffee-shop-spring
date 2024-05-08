@@ -12,9 +12,7 @@ import java.util.List;
 @Entity
 @Table
 @AllArgsConstructor
-public class Product implements Serializable{
-
-	private static final long serialVersionUID = 1L;
+public class Product{
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
